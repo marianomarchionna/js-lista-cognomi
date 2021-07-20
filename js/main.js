@@ -11,9 +11,9 @@ listaCognomi.push(cognome);
 
 //metodo per ordinare alfabeticamente un vettore
 listaCognomi.sort();
-console.log("Lista cognomi ordinata:")
 for(var i = 0; i < listaCognomi.length; i++){
-    console.log(listaCognomi[i]);
+    document.getElementById('my_surname').innerHTML += listaCognomi[i] + "   ";
 }
 //trovare posizione nuovo elemento
-console.log("Posizione 'umana' nuovo cognome: ", listaCognomi.indexOf(cognome) + 1);
+var position = listaCognomi.indexOf(cognome) + 1;
+document.getElementById('my_position').innerHTML ="Posizione 'umana' di " + cognome + " = " + position;
