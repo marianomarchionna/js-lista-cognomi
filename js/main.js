@@ -7,7 +7,12 @@ var cognome = prompt('Inserisci la cognome: ');
 
 listaCognomi.push(cognome);
 
-console.log("Lista cognomi non ordinata:")
+//metodo per ordinare alfabeticamente un vettore
+listaCognomi.sort();
+console.log("Lista cognomi ordinata:")
 for(var i = 0; i < listaCognomi.length; i++){
     console.log(listaCognomi[i]);
 }
+//trovare posizione nuovo elemento
+var positione = listaCognomi.indexOf(cognome);
+console.log("Posizione 'umana' nuovo cognome: " + positione + 1);
