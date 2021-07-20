@@ -4,6 +4,8 @@
 // scrivi anche la posizione "umana" (partendo da 1) della lista in cui il nuovo utente si trova
 var listaCognomi = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 var cognome = prompt('Inserisci la cognome: ');
+//lettera maiuscola al cognome inserito
+cognome = cognome.charAt(0).toUpperCase() + cognome.slice(1);
 
 listaCognomi.push(cognome);
 
@@ -14,5 +16,4 @@ for(var i = 0; i < listaCognomi.length; i++){
     console.log(listaCognomi[i]);
 }
 //trovare posizione nuovo elemento
-var positione = listaCognomi.indexOf(cognome);
-console.log("Posizione 'umana' nuovo cognome: " + positione + 1);
+console.log("Posizione 'umana' nuovo cognome: ", listaCognomi.indexOf(cognome) + 1);
